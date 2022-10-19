@@ -1,0 +1,44 @@
+Program membuat class Node
+
+deklarasi 
+var value : any
+var next : Node
+Constructor Node()
+setNext() : void
+getNext() : Node
+getValue() : any
+toString()  : String
+
+Program membuat Queue
+
+deklarasi
+var first : Node
+
+algoritma
+DEFINE FUNCTION push(value : any) : void
+    var temp : Node = Node(value)
+    if first == null
+        then first = temp
+    else temp.setNext(first)
+        var container : Node = first
+        while container.getNext() != null
+            container = container.getNext()
+        container.setNext(temp)
+
+DEFINE FUNCTION haspop() : void
+    return first != null
+
+DEFINE FUNCTION pop() : void
+    if this.hasPop()
+        then first = first.getNext()
+
+
+DEFINE FUNCTION toString() : String
+    var str : String= ""
+    var temp : Node = first
+    while (temp.getNext()!= null)
+        str = str + temp.toString()
+        temp = temp.getNext()
+        end while loop
+    str = str + temp.toString()
+    return str
